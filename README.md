@@ -7,11 +7,11 @@
 - [Tools](#tools)
 - [Data Cleaning and Pre-processing](#data-cleaning-and-pre-processing)
 - [Analysis](#analysis)
-- [Findings](#Findings)
-- [Conclusion](#Conclusion)
-- [Recommendations](#recommendations)
+- [Findings](#findings)
+- [Conclusion](#conclusion)
+- [Recommendations](#recommendation)
 - [Limitations](#limitations)
-- [REFERENCES](#references)
+
 
 ---
 
@@ -62,12 +62,15 @@ The analysis proceeds through these core steps:
 1. **Exploratory Data Analysis (EDA)**: Identifying key trends, visualising the relationship between price and sales volume, and understanding the impact of different pricing strategies on demand.
    
    Example Code: To understand customers buying patterns and tailor pricing strategies accordingly.
-   ```python
+
+``` python
    
 customer_data = df[['qty', 'total_price', 'customers']]
 kmeans = KMeans(n_clusters=3, random_state=42)
 df['customer_segment'] = kmeans.fit_predict(customer_data)
-print(kmeans.cluster_centers_)```
+print(kmeans.cluster_centers_)
+
+```
 
 <img width="986" alt="Segment" src="https://github.com/user-attachments/assets/b637b081-77f2-4c62-a98f-254301194733">
 
@@ -82,6 +85,7 @@ This cluster includes customers who buy the most items (49.71) and spend the mos
 
 
 Machine learning models, such as regression analysis, were used to explore the relationships between product prices, sales quantities, and customer segments. A pricing strategy optimisation model was developed to predict how price changes impact sales volume and revenue. The model also factored in competitor pricing data and historical sales trends to determine the most effective pricing adjustments.
+
 ## Findings
 
 ### Simulated Sales Increase After Price Reduction:
@@ -156,7 +160,7 @@ Price sensitivity varies by category. Certain products show strong demand respon
 
 
 
-## Conclusion:
+## Conclusion
 This analysis demonstrates the value of machine learning in optimizing pricing by understanding price elasticity the relationship between price changes and customer purchasing behavior. By using historical data, machine learning models help estimate demand responses,enabling Hope Freight to make informed pricing decisions that will drive the greatest revenue growth. Through strategic price adjustments and sales volume , businesses can fine-tune their pricing strategies to enhance profitability, even in the face of slightly reduced margins.
 
 
